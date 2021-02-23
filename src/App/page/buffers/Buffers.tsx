@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../../component/PageWrapper/PageWrapper';
-import { Box, Button, FormControl, HStack, Input, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Code, FormControl, HStack, Input, Text, VStack } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MessageAction } from '../../store/message/message.action';
 import { BufferSelector } from '../../store/buffer/buffer.selector';
 import { Message } from '../../store/buffer/buffer.action';
+import { buffers } from 'redux-saga';
 
 export const Buffers = () => {
   const [count, setCount] = useState('10');
@@ -38,7 +39,10 @@ export const Buffers = () => {
           </HStack>
         </Box>
 
-        <Box w="500px" display="flex" alignItems="flex-start" flexWrap="wrap">
+        <Box pt={12}>
+          <Code fontSize="xl">buffers.none()</Code>
+        </Box>
+        <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {none.map((message, index) => (
             <Box
               w={10}
@@ -55,7 +59,11 @@ export const Buffers = () => {
             </Box>
           ))}
         </Box>
-        <Box w="500px" display="flex" alignItems="flex-start" flexWrap="wrap">
+
+        <Box pt={12}>
+          <Code fontSize="xl">buffers.expanding(5)</Code>
+        </Box>
+        <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {expanding.map((message, index) => (
             <Box
               w={10}
@@ -72,7 +80,11 @@ export const Buffers = () => {
             </Box>
           ))}
         </Box>
-        <Box w="500px" display="flex" alignItems="flex-start" flexWrap="wrap">
+
+        <Box pt={12}>
+          <Code fontSize="xl">buffers.dropping(5)</Code>
+        </Box>
+        <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {dropping.map((message, index) => (
             <Box
               w={10}
@@ -89,7 +101,11 @@ export const Buffers = () => {
             </Box>
           ))}
         </Box>
-        <Box w="500px" display="flex" alignItems="flex-start" flexWrap="wrap">
+
+        <Box pt={12}>
+          <Code fontSize="xl">buffers.sliding(5)</Code>
+        </Box>
+        <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {sliding.map((message, index) => (
             <Box
               w={10}
