@@ -16,6 +16,9 @@ export const Message = () => {
     setMessage('');
     dispatch(MessageAction.send(message));
   };
+  const close = () => {
+    dispatch(MessageAction.close());
+  };
 
   return (
     <PageWrapper>
@@ -31,6 +34,10 @@ export const Message = () => {
             </FormControl>
             <Button onClick={submit}>Send</Button>
           </HStack>
+
+          <Button mt={2} onClick={close}>
+            Close connection
+          </Button>
         </Box>
         <Box w="500px" display="flex" alignItems="flex-start" flexDirection="column">
           {messages.map((message, index) => (

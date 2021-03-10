@@ -6,4 +6,6 @@ export class MessageAction {
   static send = createAction<Message>('WS_MESSAGE_SEND');
 
   static receive = createAction<Message>('WS_MESSAGE_RECEIVE');
+
+  static close = createAction('WS_CLOSE');
 }

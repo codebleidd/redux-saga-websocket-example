@@ -42,6 +42,11 @@ export const Buffers = () => {
         <Box pt={12}>
           <Code fontSize="xl">buffers.none()</Code>
         </Box>
+        <Box pt={2}>
+          <Text>
+            This buffer ignores all messeges that comes from socket when current is processing
+          </Text>
+        </Box>
         <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {none.map((message, index) => (
             <Box
@@ -62,6 +67,9 @@ export const Buffers = () => {
 
         <Box pt={12}>
           <Code fontSize="xl">buffers.expanding(5)</Code>
+        </Box>
+        <Box pt={2}>
+          <Text>This buffer ignores expands when reaches a limit of received messages</Text>
         </Box>
         <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {expanding.map((message, index) => (
@@ -84,6 +92,12 @@ export const Buffers = () => {
         <Box pt={12}>
           <Code fontSize="xl">buffers.dropping(5)</Code>
         </Box>
+        <Box pt={2}>
+          <Text>
+            This buffer keep only messages tha come first, every other that is above limit is
+            dropped
+          </Text>
+        </Box>
         <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {dropping.map((message, index) => (
             <Box
@@ -104,6 +118,11 @@ export const Buffers = () => {
 
         <Box pt={12}>
           <Code fontSize="xl">buffers.sliding(5)</Code>
+        </Box>
+        <Box pt={2}>
+          <Text>
+            This buffer keep only latest messages, every message which came earlier is dropped
+          </Text>
         </Box>
         <Box w="800px" display="flex" alignItems="flex-start" flexWrap="wrap">
           {sliding.map((message, index) => (
