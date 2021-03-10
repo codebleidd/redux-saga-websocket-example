@@ -1,8 +1,5 @@
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { Box, Button, VStack, HStack, FormControl, Input, Text } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../../component/ColorModeSwitcher/ColorModeSwitcher';
-import { Logo } from '../../component/icon/Logo/Logo';
-import { Link } from 'react-router-dom';
 import { PageWrapper } from '../../component/PageWrapper/PageWrapper';
 import { useDispatch, useSelector } from 'react-redux';
 import { MessageAction } from '../../store/message/message.action';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../../component/PageWrapper/PageWrapper';
-import { Box, Button, Code, FormControl, HStack, Input, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Code, HStack, Input, Text, VStack } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MessageAction } from '../../store/message/message.action';
 import { BufferSelector } from '../../store/buffer/buffer.selector';
